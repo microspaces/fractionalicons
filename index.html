@@ -1,0 +1,772 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#101010" />
+  <link rel="icon" href="data:," />
+  <title>Fractional Icons — Security-led AI leadership</title>
+  <meta name="description" content="Fractional AI leadership for companies moving fast without losing control. Security architecture, agent governance, and executive AI strategy on a premium monthly retainer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f3f3f1;
+      --surface: #ffffff;
+      --surface-2: #e8e8e5;
+      --ink: #111111;
+      --muted: #5d5d59;
+      --line: #cececa;
+      --line-strong: #92928d;
+      --signal: #deded9;
+      --signal-ink: #151515;
+      --alarm: #767671;
+      --deep: #101010;
+      --deep-2: #1a1a1a;
+      --deep-ink: #f4f4f1;
+      --deep-muted: #b3b3ae;
+      --shadow: 0 22px 60px rgba(17,17,17,.12);
+      --pad: clamp(20px, 4vw, 64px);
+      --max: 1320px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d0d0d;
+        --surface: #171717;
+        --surface-2: #202020;
+        --ink: #f4f4f0;
+        --muted: #b4b4af;
+        --line: #30302e;
+        --line-strong: #5c5c58;
+        --signal: #deded9;
+        --signal-ink: #111111;
+        --alarm: #b0b0aa;
+        --deep: #070707;
+        --deep-2: #121212;
+        --deep-ink: #f5f5f2;
+        --deep-muted: #b4b4af;
+        --shadow: 0 24px 70px rgba(0,0,0,.36);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "IBM Plex Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    button, a { font: inherit; }
+    a { color: inherit; }
+    button { color: inherit; }
+    ::selection { background: var(--signal); color: #111111; }
+
+    .skip {
+      position: absolute;
+      left: 12px;
+      top: -60px;
+      z-index: 100;
+      background: var(--signal);
+      color: var(--signal-ink);
+      padding: 10px 14px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .skip:focus { top: 12px; }
+
+    .nav-shell {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(16px);
+    }
+    nav {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      min-height: 68px;
+      padding: 0 var(--pad);
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 24px;
+    }
+    .nav-index {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: .04em;
+      white-space: nowrap;
+    }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
+      font-size: 13px;
+      text-decoration: none;
+      color: var(--muted);
+      transition: color .2s ease;
+    }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--ink); }
+    .nav-cta {
+      justify-self: end;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--ink);
+      color: var(--bg);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 11px 15px;
+    }
+    .nav-cta::after { content: "↘"; font-size: 15px; }
+
+    main { overflow: hidden; }
+    .hero {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: clamp(58px, 8vw, 112px) var(--pad) 40px;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.18fr) minmax(330px, .72fr);
+      gap: clamp(42px, 7vw, 100px);
+      align-items: end;
+    }
+    .chapter {
+      margin: 0 0 28px;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      color: var(--muted);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 11px;
+    }
+    .chapter::before { content: ""; width: 38px; height: 1px; background: var(--line-strong); }
+    h1 {
+      margin: 0;
+      max-width: 850px;
+      font-size: clamp(52px, 7.2vw, 104px);
+      line-height: .91;
+      letter-spacing: -.067em;
+      font-weight: 500;
+    }
+    h1 em {
+      display: block;
+      color: var(--muted);
+      font-family: "Newsreader", serif;
+      font-weight: 400;
+      letter-spacing: -.045em;
+    }
+    .hero-copy {
+      margin: 35px 0 0;
+      max-width: 610px;
+      font-size: clamp(17px, 1.5vw, 21px);
+      line-height: 1.55;
+      color: var(--muted);
+    }
+    .hero-copy strong { color: var(--ink); font-weight: 500; }
+    .hero-actions { margin-top: 34px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .button {
+      min-height: 48px;
+      padding: 0 19px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid var(--ink);
+    }
+    .button.primary { background: var(--ink); color: var(--bg); }
+    .button.secondary { color: var(--ink); }
+    .button span { font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+
+    .security-frame {
+      position: relative;
+      min-height: 530px;
+      padding: 28px;
+      background: var(--deep);
+      color: var(--deep-ink);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .security-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .16;
+      background-image: linear-gradient(rgba(255,255,255,.18) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.18) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, #000, transparent 82%);
+    }
+    .frame-top { position: relative; z-index: 2; display: flex; justify-content: space-between; gap: 18px; }
+    .frame-label { font: 500 10px/1.3 "IBM Plex Mono", monospace; letter-spacing: .08em; color: var(--deep-muted); }
+    .status { display: flex; gap: 8px; align-items: center; font: 500 10px/1 "IBM Plex Mono", monospace; color: var(--deep-ink); }
+    .status::before { content: ""; width: 7px; height: 7px; background: var(--signal); border-radius: 50%; box-shadow: 0 0 0 4px rgba(222,222,217,.10); }
+    .shield-visual {
+      position: relative;
+      z-index: 2;
+      width: min(86%, 340px);
+      margin: 45px auto 20px;
+      aspect-ratio: 1;
+    }
+    .shield-visual svg { display: block; width: 100%; height: 100%; }
+    .pulse { transform-origin: center; animation: pulse 3.4s ease-in-out infinite; }
+    @keyframes pulse { 0%,100% { opacity: .25; transform: scale(.96); } 50% { opacity: .7; transform: scale(1.03); } }
+    .frame-metrics {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid #3b3b38;
+      margin-top: 16px;
+    }
+    .metric { padding: 18px 0 0; }
+    .metric + .metric { padding-left: 20px; border-left: 1px solid #3b3b38; }
+    .metric b { display: block; font-size: 14px; font-weight: 500; }
+    .metric span { display: block; margin-top: 7px; color: var(--deep-muted); font-size: 11px; line-height: 1.4; }
+
+    .ticker {
+      margin-top: clamp(58px, 7vw, 92px);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .ticker div { padding: 18px 18px 18px 0; font: 500 11px/1.4 "IBM Plex Mono", monospace; color: var(--muted); }
+    .ticker div:not(:first-child) { padding-left: 18px; border-left: 1px solid var(--line); }
+
+    .section {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: clamp(84px, 10vw, 150px) var(--pad);
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: .72fr 1.28fr;
+      gap: clamp(32px, 8vw, 120px);
+      margin-bottom: clamp(50px, 7vw, 94px);
+    }
+    .section-no { font: 500 11px/1.3 "IBM Plex Mono", monospace; color: var(--muted); }
+    h2 {
+      margin: 0;
+      font-size: clamp(38px, 5vw, 70px);
+      line-height: .98;
+      letter-spacing: -.045em;
+      font-weight: 500;
+    }
+    .section-intro { margin: 22px 0 0; max-width: 690px; color: var(--muted); font-size: 17px; line-height: 1.6; }
+
+    .services { border-top: 1px solid var(--line-strong); }
+    .service-row {
+      display: grid;
+      grid-template-columns: 80px 1fr 1.1fr;
+      gap: 28px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+      align-items: start;
+    }
+    .service-id { font: 500 11px/1.4 "IBM Plex Mono", monospace; color: var(--muted); padding-top: 6px; }
+    .service-row h3 { margin: 0; font-size: clamp(22px, 2.4vw, 34px); line-height: 1.1; font-weight: 500; letter-spacing: -.025em; }
+    .service-row p { margin: 0; color: var(--muted); line-height: 1.62; font-size: 15px; max-width: 580px; }
+    .product-note { margin-top: 13px; display: flex; align-items: center; gap: 9px; color: var(--ink); font: 500 11px/1.4 "IBM Plex Mono", monospace; }
+    .product-note i { width: 7px; height: 7px; background: var(--signal); display: inline-block; border: 1px solid var(--ink); }
+
+    .dark-band { background: var(--deep); color: var(--deep-ink); }
+    .dark-band .section { padding-top: clamp(82px, 9vw, 130px); padding-bottom: clamp(82px, 9vw, 130px); }
+    .dark-band .section-no, .dark-band .section-intro { color: var(--deep-muted); }
+    .method-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #3b3b38; }
+    .method { min-height: 330px; padding: 28px 30px 28px 0; border-bottom: 1px solid #3b3b38; }
+    .method + .method { padding-left: 30px; border-left: 1px solid #3b3b38; }
+    .method .day { display: inline-block; padding: 6px 9px; color: var(--signal); border: 1px solid #4b4b47; font: 500 10px/1 "IBM Plex Mono", monospace; }
+    .method h3 { margin: 74px 0 15px; font-size: 28px; letter-spacing: -.025em; font-weight: 500; }
+    .method p { margin: 0; color: var(--deep-muted); font-size: 14px; line-height: 1.65; }
+    .method ul { list-style: none; padding: 0; margin: 22px 0 0; }
+    .method li { position: relative; padding: 9px 0 9px 18px; border-top: 1px solid #2d2d2a; color: var(--deep-ink); font-size: 12px; }
+    .method li::before { content: "→"; position: absolute; left: 0; color: var(--signal); }
+
+    .proof-grid { display: grid; grid-template-columns: .88fr 1.12fr; gap: clamp(44px, 8vw, 110px); align-items: start; }
+    .quote-block { position: sticky; top: 104px; }
+    .quote-mark { font: 400 86px/.7 "Newsreader", serif; color: var(--alarm); }
+    blockquote { margin: 24px 0 26px; font-family: "Newsreader", serif; font-style: italic; font-size: clamp(30px, 4vw, 51px); line-height: 1.05; letter-spacing: -.025em; }
+    .quote-foot { color: var(--muted); font: 500 11px/1.5 "IBM Plex Mono", monospace; }
+    .control-list { border-top: 1px solid var(--line-strong); }
+    .control {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 22px;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .control svg { width: 28px; height: 28px; color: var(--ink); }
+    .control h3 { margin: 0 0 8px; font-size: 18px; font-weight: 500; }
+    .control p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+
+    .retainer-wrap { padding: 0 var(--pad) clamp(72px, 10vw, 145px); }
+    .retainer {
+      width: min(100%, calc(var(--max) - (2 * var(--pad))));
+      margin: 0 auto;
+      background: var(--signal);
+      color: var(--signal-ink);
+    }
+    .retainer-main {
+      display: grid;
+      grid-template-columns: .64fr 1.36fr;
+      gap: clamp(28px, 7vw, 96px);
+      padding: clamp(36px, 5vw, 66px);
+      border-bottom: 1px solid rgba(17,17,17,.28);
+    }
+    .retainer .section-no { color: #5b5b56; }
+    .retainer h2 { max-width: 760px; }
+    .retainer-copy { max-width: 720px; margin: 22px 0 0; font-size: 17px; line-height: 1.6; color: #454541; }
+    .tier-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .tier {
+      min-width: 0;
+      padding: clamp(30px, 3.2vw, 46px);
+      display: flex;
+      flex-direction: column;
+    }
+    .tier + .tier { border-left: 1px solid rgba(17,17,17,.28); }
+    .tier-featured { background: var(--signal-ink); color: var(--signal); }
+    .tier-kicker { display: flex; align-items: center; justify-content: space-between; gap: 12px; font: 500 10px/1.4 "IBM Plex Mono", monospace; letter-spacing: .05em; }
+    .tier-kicker span:last-child { color: #5f5f5a; }
+    .tier-featured .tier-kicker span:last-child { color: var(--signal); }
+    .tier h3 { margin: 34px 0 0; font-size: clamp(30px, 3vw, 44px); line-height: 1; letter-spacing: -.035em; font-weight: 500; }
+    .tier-price { margin-top: 16px; font-size: clamp(31px, 3.3vw, 48px); line-height: 1; letter-spacing: -.04em; font-weight: 500; }
+    .tier-price small { font-size: 13px; letter-spacing: 0; font-weight: 500; }
+    .tier-hours { margin-top: 10px; color: #50504b; font: 500 11px/1.5 "IBM Plex Mono", monospace; }
+    .tier-featured .tier-hours { color: #c6c6c0; }
+    .tier-position { min-height: 68px; margin: 24px 0 0; font-size: 14px; line-height: 1.55; color: #3f3f3b; }
+    .tier-featured .tier-position { color: #ddddda; }
+    .tier-terms { margin-top: 22px; padding: 14px 0; border-top: 1px solid rgba(17,17,17,.24); border-bottom: 1px solid rgba(17,17,17,.24); font: 500 11px/1.65 "IBM Plex Mono", monospace; }
+    .tier-featured .tier-terms { border-color: #454542; color: #ddddda; }
+    .retainer-list { list-style: none; padding: 0; margin: 24px 0 30px; }
+    .retainer-list li { position: relative; padding: 10px 0 10px 17px; border-bottom: 1px solid rgba(17,17,17,.19); font-size: 13px; line-height: 1.5; }
+    .retainer-list li::before { content: "→"; position: absolute; left: 0; }
+    .tier-featured .retainer-list li { border-color: #383835; }
+    .tier .button { width: 100%; margin-top: auto; background: var(--signal-ink); color: var(--signal); border-color: var(--signal-ink); }
+    .tier-featured .button { background: var(--signal); color: var(--signal-ink); border-color: var(--signal); }
+    .retainer-meta { padding: 24px clamp(30px, 3.2vw, 46px) 30px; border-top: 1px solid rgba(17,17,17,.28); display: grid; grid-template-columns: 1fr 1fr; gap: 24px 46px; }
+    .retainer-meta p { margin: 0; color: #454541; font-size: 12px; line-height: 1.65; }
+    .retainer-meta strong { color: var(--signal-ink); }
+    .retainer-meta a { text-underline-offset: 3px; }
+
+    .faq { border-top: 1px solid var(--line-strong); }
+    details { border-bottom: 1px solid var(--line); }
+    summary {
+      list-style: none;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: 1fr 36px;
+      gap: 20px;
+      align-items: center;
+      padding: 24px 0;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; text-align: right; font: 400 24px/1 "IBM Plex Mono", monospace; }
+    details[open] summary::after { content: "−"; }
+    details p { max-width: 800px; margin: -4px 0 26px; color: var(--muted); line-height: 1.65; font-size: 15px; }
+
+    .close {
+      width: min(100%, var(--max));
+      margin: 0 auto;
+      padding: 22px var(--pad) 34px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      color: var(--muted);
+      font: 400 10px/1.5 "IBM Plex Mono", monospace;
+    }
+    .close a { text-decoration-thickness: 1px; text-underline-offset: 4px; }
+
+    .mobile-nav { display: none; }
+    .menu-button { display: none; background: none; border: 0; padding: 10px; justify-self: end; }
+
+    @media (max-width: 920px) {
+      nav { grid-template-columns: 1fr auto; }
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .menu-button { display: block; }
+      .menu-button span { display: block; width: 22px; height: 1px; background: var(--ink); margin: 5px 0; }
+      .mobile-nav {
+        display: none;
+        padding: 0 var(--pad) 18px;
+        border-top: 1px solid var(--line);
+      }
+      .mobile-nav.open { display: grid; }
+      .mobile-nav a { padding: 13px 0; border-bottom: 1px solid var(--line); text-decoration: none; font-size: 14px; }
+      .hero-grid { grid-template-columns: 1fr; align-items: start; }
+      .security-frame { min-height: 500px; width: min(100%, 570px); }
+      .section-head { grid-template-columns: 1fr; }
+      .service-row { grid-template-columns: 52px 1fr; }
+      .service-row p { grid-column: 2; }
+      .method-grid { grid-template-columns: 1fr; }
+      .method { min-height: auto; padding: 28px 0 34px; }
+      .method + .method { padding-left: 0; border-left: 0; }
+      .method h3 { margin-top: 44px; }
+      .proof-grid { grid-template-columns: 1fr; }
+      .quote-block { position: static; }
+      .retainer-main { grid-template-columns: 1fr; }
+      .tier-grid { grid-template-columns: 1fr; }
+      .tier + .tier { border-left: 0; border-top: 1px solid rgba(17,17,17,.28); }
+      .retainer-meta { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 620px) {
+      .hero { padding-top: 48px; }
+      h1 { font-size: clamp(46px, 15vw, 66px); }
+      .hero-copy { margin-top: 28px; }
+      .hero-actions { display: grid; }
+      .button { width: 100%; }
+      .security-frame { min-height: 440px; padding: 22px; }
+      .shield-visual { margin-top: 32px; width: 90%; }
+      .ticker { grid-template-columns: 1fr 1fr; }
+      .ticker div { padding: 15px 12px 15px 0; }
+      .ticker div:not(:first-child) { padding-left: 12px; }
+      .ticker div:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
+      .ticker div:nth-child(4) { border-top: 1px solid var(--line); }
+      .service-row { grid-template-columns: 1fr; gap: 12px; }
+      .service-row p { grid-column: 1; }
+      .control { grid-template-columns: 30px 1fr; gap: 15px; }
+      .retainer-wrap { padding-left: 0; padding-right: 0; }
+      .retainer { width: 100%; }
+      .retainer-main, .tier { padding: 34px 22px; }
+      .retainer-meta { padding: 24px 22px 28px; }
+      .tier-position { min-height: 0; }
+      .close { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .pulse { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <header class="nav-shell">
+    <nav aria-label="Primary navigation">
+      <div class="nav-index">FRACTIONAL AI / SECURITY FIRST</div>
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#method">Method</a>
+        <a href="#retainer">Retainer</a>
+        <a href="#questions">Questions</a>
+      </div>
+      <a class="nav-cta" href="#retainer">Private intake</a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+    </nav>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#services">Services</a>
+      <a href="#method">Method</a>
+      <a href="#retainer">Retainer</a>
+      <a href="#questions">Questions</a>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grid">
+        <div>
+          <p class="chapter">01 / Security-led AI leadership</p>
+          <h1 id="hero-title">AI velocity.<em>Security discipline.</em></h1>
+          <p class="hero-copy"><strong>Fractional AI leadership for companies moving faster than their risk model.</strong> We turn executive ambition into secure systems, governed agents, and an operating advantage your team can actually own.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#retainer">Explore the retainer <span>↘</span></a>
+            <a class="button secondary" href="#services">See the security scope <span>02</span></a>
+          </div>
+        </div>
+
+        <aside class="security-frame" aria-label="Security operating model illustration">
+          <div class="frame-top">
+            <div class="frame-label">AI CONTROL PLANE<br />EXECUTIVE VIEW</div>
+            <div class="status">GUARDRAILS ACTIVE</div>
+          </div>
+          <div class="shield-visual" aria-hidden="true">
+            <svg viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle class="pulse" cx="180" cy="180" r="138" stroke="#DEDED9" stroke-width="1" stroke-dasharray="5 8"/>
+              <circle cx="180" cy="180" r="105" stroke="#555550"/>
+              <circle cx="180" cy="180" r="76" stroke="#3b3b38" stroke-dasharray="3 7"/>
+              <path d="M180 78L258 108V167C258 220 227 264 180 282C133 264 102 220 102 167V108L180 78Z" fill="#191919" stroke="#DEDED9" stroke-width="2"/>
+              <path d="M180 108L229 127V166C229 202 210 233 180 247C150 233 131 202 131 166V127L180 108Z" stroke="#70706B"/>
+              <path d="M158 178L174 194L207 157" stroke="#DEDED9" stroke-width="5" stroke-linecap="square"/>
+              <circle cx="180" cy="42" r="5" fill="#8A8A84"/>
+              <circle cx="318" cy="180" r="5" fill="#DEDED9"/>
+              <circle cx="180" cy="318" r="5" fill="#DEDED9"/>
+              <circle cx="42" cy="180" r="5" fill="#DEDED9"/>
+              <path d="M180 47V78M313 180H258M180 313V282M47 180H102" stroke="#797974" stroke-dasharray="3 5"/>
+            </svg>
+          </div>
+          <div class="frame-metrics">
+            <div class="metric"><b>Govern</b><span>Policies, permissions, ownership</span></div>
+            <div class="metric"><b>Defend</b><span>Detection, containment, response</span></div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="ticker" aria-label="Core disciplines">
+        <div>01 / AI STRATEGY</div>
+        <div>02 / AGENT SECURITY</div>
+        <div>03 / GOVERNANCE</div>
+        <div>04 / EXECUTIVE READINESS</div>
+      </div>
+    </section>
+
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="section-head">
+        <div class="section-no">02 / THE MANDATE</div>
+        <div>
+          <h2 id="services-title">A senior AI function—without the senior AI headcount.</h2>
+          <p class="section-intro">Built for leadership teams that need decisions, controls, and delivery—not another pile of slideware. Security leads the engagement; growth and automation follow.</p>
+        </div>
+      </div>
+
+      <div class="services">
+        <article class="service-row">
+          <div class="service-id">S.01</div>
+          <h3>AI security architecture</h3>
+          <p>Map models, agents, data, vendors, and identities into a control plane that your business and technical teams can run. Define access boundaries before automation becomes exposure.</p>
+        </article>
+        <article class="service-row">
+          <div class="service-id">S.02</div>
+          <h3>Agentic defense</h3>
+          <div>
+            <p>Deploy and operationalize an agent-focused defensive layer with clear alert paths, human escalation, and executive-level reporting.</p>
+            <div class="product-note"><i></i> Featuring Cyberchain’s Agentic Defender, listed in ClawHub</div>
+          </div>
+        </article>
+        <article class="service-row">
+          <div class="service-id">S.03</div>
+          <h3>Governance &amp; red-team readiness</h3>
+          <p>Set acceptable-use policy, vendor review, risk tiers, testing standards, and incident ownership. Stress-test the workflows that matter before they fail in production.</p>
+        </article>
+        <article class="service-row">
+          <div class="service-id">S.04</div>
+          <h3>AI operating strategy</h3>
+          <p>Prioritize the opportunities with defensible economics, appoint accountable owners, and install a delivery cadence that turns scattered experiments into a managed portfolio.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="dark-band" id="method" aria-labelledby="method-title">
+      <div class="section">
+        <div class="section-head">
+          <div class="section-no">03 / OPERATING RHYTHM</div>
+          <div>
+            <h2 id="method-title">From exposure to operating control.</h2>
+            <p class="section-intro">The first month creates visibility and decision rights. The retainer keeps the system moving—securely, measurably, and with an executive at the table.</p>
+          </div>
+        </div>
+
+        <div class="method-grid">
+          <article class="method">
+            <span class="day">WEEK 01</span>
+            <h3>Expose</h3>
+            <p>Build the real inventory: where AI touches data, customers, decisions, and credentials.</p>
+            <ul>
+              <li>Executive risk interview</li>
+              <li>AI and agent surface map</li>
+              <li>Priority exposure register</li>
+            </ul>
+          </article>
+          <article class="method">
+            <span class="day">WEEKS 02–03</span>
+            <h3>Control</h3>
+            <p>Translate risk into architecture, policy, ownership, and response paths the team will use.</p>
+            <ul>
+              <li>Control-plane blueprint</li>
+              <li>Agent permission model</li>
+              <li>Escalation and response design</li>
+            </ul>
+          </article>
+          <article class="method">
+            <span class="day">WEEK 04 →</span>
+            <h3>Compound</h3>
+            <p>Run the AI portfolio as a leadership function: review, prioritize, test, and improve.</p>
+            <ul>
+              <li>Monthly executive review</li>
+              <li>Delivery and vendor oversight</li>
+              <li>Continuous defense tuning</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="control-title">
+      <div class="proof-grid">
+        <div class="quote-block">
+          <div class="quote-mark">“</div>
+          <blockquote id="control-title">The goal isn’t slower AI. It’s AI that can survive contact with the real business.</blockquote>
+          <div class="quote-foot">THE FRACTIONAL ICONS OPERATING PRINCIPLE</div>
+        </div>
+
+        <div class="control-list">
+          <article class="control">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16M12 4v16" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div><h3>Human authority stays explicit</h3><p>Define which decisions an agent can make, what needs approval, and who owns the outcome when the system behaves unexpectedly.</p></div>
+          </article>
+          <article class="control">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V9l8-5 8 5v10H4Z" stroke="currentColor" stroke-width="1.5"/><path d="M9 19v-6h6v6" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div><h3>Data boundaries are designed</h3><p>Separate sensitive data, privileged tools, and customer-facing workflows before they become a single broad trust zone.</p></div>
+          </article>
+          <article class="control">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12a7 7 0 1 0 2.05-4.95L5 9" stroke="currentColor" stroke-width="1.5"/><path d="M5 5v4h4" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div><h3>Response is rehearsed</h3><p>Give security, operations, and leadership one shared path from detection to containment, recovery, and stakeholder communication.</p></div>
+          </article>
+          <article class="control">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 18V6m0 12h16" stroke="currentColor" stroke-width="1.5"/><path d="m7 15 4-5 3 2 5-6" stroke="currentColor" stroke-width="1.5"/></svg>
+            <div><h3>Value remains measurable</h3><p>Tie each AI initiative to an owner, a baseline, an economic target, and a risk tier—then make continuation a deliberate decision.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="retainer-wrap" id="retainer" aria-labelledby="retainer-title">
+      <div class="retainer">
+        <div class="retainer-main">
+          <div class="section-no">04 / MONTHLY RETAINERS</div>
+          <div>
+            <h2 id="retainer-title">Choose the level of ownership.</h2>
+            <p class="retainer-copy">Three security-led engagements, each with reserved senior capacity and a defined overage rate. Sentinel begins with a two-week AI Security Readiness Audit; Fortress and Citadel add deeper governance, executive presence, and response commitments.</p>
+          </div>
+        </div>
+
+        <div class="tier-grid">
+          <article class="tier" aria-labelledby="sentinel-title">
+            <div class="tier-kicker"><span>TIER 01</span><span>BASELINE</span></div>
+            <h3 id="sentinel-title">Sentinel</h3>
+            <div class="tier-price">$8,000 <small>/ month</small></div>
+            <div class="tier-hours">24 HOURS / MO · $350/HR OVERAGE</div>
+            <p class="tier-position">For companies deploying their first agents or Copilot rollouts and needing a defensible AI-security baseline.</p>
+            <div class="tier-terms">3-MONTH MINIMUM · THEN MONTH-TO-MONTH · 30-DAY NOTICE · UP TO 25% ROLLOVER</div>
+            <ul class="retainer-list">
+              <li>Shadow-AI and AI-use inventory</li>
+              <li>Acceptable-use policy and NIST AI RMF-aligned risk register</li>
+              <li>Agent inventory and access-policy baseline for up to 10 agents</li>
+              <li>Monthly 90-minute governance review</li>
+              <li>48-hour async advisory response</li>
+              <li>Quarterly AI security posture report</li>
+              <li>$4,500 two-week readiness audit, credited on conversion</li>
+            </ul>
+            <a class="button" href="#questions">Review Sentinel fit <span>↓</span></a>
+          </article>
+
+          <article class="tier tier-featured" aria-labelledby="fortress-title">
+            <div class="tier-kicker"><span>TIER 02</span><span>CORE</span></div>
+            <h3 id="fortress-title">Fortress</h3>
+            <div class="tier-price">$9,500 <small>/ month</small></div>
+            <div class="tier-hours">28 HOURS / MO · $375/HR OVERAGE</div>
+            <p class="tier-position">The fractional AI-security leadership tier: strategy, governance, and managed enforcement.</p>
+            <div class="tier-terms">6-MONTH INITIAL TERM · 10% QUARTERLY PREPAY SAVINGS · 25% ROLLOVER</div>
+            <ul class="retainer-list">
+              <li>Everything in Sentinel</li>
+              <li>Named fractional AI leader and biweekly executive 1:1</li>
+              <li>AI roadmap and written vendor/model evaluations</li>
+              <li>Managed agent governance and quarterly access review</li>
+              <li>Annual agentic-AI security assessment</li>
+              <li>NIST AI RMF, EU AI Act, and ISO 42001 gap plan</li>
+              <li>Two team workshops per quarter</li>
+              <li>Quarterly board-ready risk and value pack</li>
+              <li>48-hour AI security incident-response SLA</li>
+            </ul>
+            <a class="button" href="#questions">Review Fortress fit <span>↓</span></a>
+          </article>
+
+          <article class="tier" aria-labelledby="citadel-title">
+            <div class="tier-kicker"><span>TIER 03</span><span>ENTERPRISE</span></div>
+            <h3 id="citadel-title">Citadel</h3>
+            <div class="tier-price">$18,000 <small>/ month</small></div>
+            <div class="tier-hours">52 HOURS / MO · $400/HR OVERAGE</div>
+            <p class="tier-position">For regulated industries and agent-heavy organizations needing an enterprise-grade fractional CAIO.</p>
+            <div class="tier-terms">12-MONTH MINIMUM · MULTIYEAR PREFERRED · 25% ROLLOVER</div>
+            <ul class="retainer-list">
+              <li>Everything in Fortress</li>
+              <li>Weekly executive 1:1 and monthly steering cadence</li>
+              <li>AI governance committee participation</li>
+              <li>Up to four board meetings per year</li>
+              <li>Annual priority-agent red-team assessment at cost-plus</li>
+              <li>M&amp;A AI due-diligence support</li>
+              <li>24-hour P0 AI incident-response SLA</li>
+              <li>Multi-cloud agent-estate coverage and custom policy packs</li>
+              <li>Additional business units available at $3,000/month each</li>
+            </ul>
+            <a class="button" href="#questions">Review Citadel fit <span>↓</span></a>
+          </article>
+        </div>
+
+        <div class="retainer-meta">
+          <p><strong>Market basis.</strong> The structure is calibrated against published fractional-AI bands from <a href="https://servenomaster.com/fractional-ai-officer-rates-hourly-vs-retainer/" target="_blank" rel="noopener noreferrer">ServeNoMaster</a> and premium governed-AI leadership pricing from <a href="https://catalogartifact.azureedge.net/publicartifacts/krivaiinc1765740253584.m46-fractional-caio-retainer-b3937e75-dfb3-4974-ac43-0d72805e8b3c/Artifacts/Documents/M46-service-brief.pdf" target="_blank" rel="noopener noreferrer">KRIV AI</a>, both reviewed September 16, 2026. ServeNoMaster’s detailed table—not its inconsistent intro summary—was used.</p>
+          <p><strong>Partner note.</strong> Agentic Defender onboarding and managed-governance scope are subject to confirmed product access and written CyberChain partner terms. Any reseller, referral, or license economics will be disclosed in writing before engagement.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="questions" aria-labelledby="questions-title">
+      <div class="section-head">
+        <div class="section-no">05 / FIT</div>
+        <div>
+          <h2 id="questions-title">For leaders who need an owner, not an advisor.</h2>
+          <p class="section-intro">The right engagement has executive sponsorship, meaningful data or automation risk, and a mandate to change how AI is governed and delivered.</p>
+        </div>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Who is this designed for?</summary>
+          <p>Founder-led, private-equity-backed, and mid-market companies with active AI initiatives—but without a senior operator accountable for strategy, security, and execution across the portfolio.</p>
+        </details>
+        <details>
+          <summary>Why begin with security?</summary>
+          <p>Because AI adoption changes the attack surface, the data boundary, and the decision chain at the same time. Security creates the operating constraints that let the rest of the portfolio move with confidence.</p>
+        </details>
+        <details>
+          <summary>What is Agentic Defender?</summary>
+          <p>It is an agentic security product created by Cyberchain and made available in ClawHub. The engagement can include planning and operational support around its use as part of a broader AI security program.</p>
+        </details>
+        <details>
+          <summary>How does the retainer work?</summary>
+          <p>Each engagement begins with a scoped security review. Ongoing work is structured as a premium monthly retainer with recurring billing and reserved strategy time once the engagement terms are approved.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="close">
+    <span>SECURITY-LED FRACTIONAL AI LEADERSHIP</span>
+    <span>FRACTIONALICONS.COM · CYBERCHAIN.BIZ · CLAWHUB</span>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    menuButton.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.setAttribute('aria-label', 'Open navigation');
+      });
+    });
+  </script>
+</body>
+</html>
