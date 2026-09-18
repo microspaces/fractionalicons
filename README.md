@@ -3,9 +3,10 @@
 Static single-file website for Fractional Icons (fractionalicons.com).
 No build step, no dependencies — `index.html` is the entire site.
 
-## Deploy options
-- **GitHub Pages:** push this repo, then Settings → Pages → Deploy from branch (main, /root).
-- **Cloudflare Pages:** drag-and-drop this folder, or connect the repo.
+## Deploy
+Production deploys to Vercel when a pull request is merged into `main`. Preview deployments are disabled.
+
+Required GitHub secret: `VERCEL_DEPLOY_HOOK_URL`.
 
 ## Notes
 - Retainer CTAs currently point at placeholder intake links. Wire them to Stripe

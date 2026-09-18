@@ -1,0 +1,19 @@
+name: Deploy production
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+concurrency:
+  group: vercel-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy merged main to Vercel production
+        run: curl -fsS -X POST "${{ secrets.VERCEL_DEPLOY_HOOK_URL }}"
